@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de Imágenes con TensorFlow.js</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="mb-4 text-center">Clasificador de Imágenes</h1>
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-8">
+                <input type="file" id="image-input" accept="image/*" class="form-control">
+            </div>
+            <div class="col-md-4 d-flex justify-content-around">
+                <button onclick="loadAndPredict()" class="btn btn-primary">Predecir</button>
+                <button onclick="clearImages()" class="btn btn-danger">Limpiar</button>
+            </div>
+        </div>
+        <div class="row mt-3" id="images-container">
+            <!-- Las imágenes cargadas aparecerán aquí dentro de elementos de tarjeta -->
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div id="progress-bars" class="alert alert-info text-center">
+                    <!-- Progress bars will be added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/App.js"></script>
+</body>
+</html>
